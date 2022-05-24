@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de" class="marketing">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="images/tampa-bay-buccaneers-2.png">
+
+    <title>Buccaneers</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+          crossorigin="anonymous">
+          <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="images/tampa-bay-buccaneers-2.png" alt="Logo"></a>
+            <ul>
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+              |
+              <li class="active">
+                <a href="./team.html">Team</a>
+              </li>
+              |
+              <li>
+                <a href="./photos.html">Photos</a>
+              </li>
+            </ul>
+            <div id="hamburgerIcon" onclick="openNav()">&#9776;</div>
+            <nav id="hamburgerNav">
+            <a class="closebtn" onclick="closeNav()" href="#">&times;</a> 
+            <ul>
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+              <li>
+                <a href="./team.html">Team</a>
+              </li>
+              <li>
+                <a href="./photos.html">Photos</a>
+              </li>
+            </ul>
+            </nav>
+          </nav>
+    </header>
+    <main>
+    <div class="container">
+      <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+              <h1 class="display-4">Important Players</h1>
+          </div>
+      </div>
+  
+      <div style="margin-bottom: 3rem"></div>
+
+      <div class="row">
+          <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+                  <div class="card-header">Player</div>
+                  <ul class="list-group list-group-flush">
+                      <li id="identification" class="list-group-item">?</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+                  <div class="card-header">College</div>
+                  <ul class="list-group list-group-flush">
+                      <li id="college" class="list-group-item">?</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div style="margin-bottom: 1.5rem"></div>
+  
+      <div class="row">
+          <div class="col-sm">
+              <div class="card" style="width: 18rem;">
+                  <div id="moduleTitle" class="card-header">Super Bowl</div>
+                  <ul class="list-group list-group-flush">
+                      <li id="superbowl" class="list-group-item"></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  
+      <div style="margin-bottom: 2rem"></div>
+      <nav aria-label="Page navigation example">
+          <ul id="pagination" class="pagination">
+              <li class="page-item">
+                  <a class="page-link" onclick="showPrevious()" href="#">Previous</a>
+              </li>
+              <li class="page-item"><p class="page-link" id="showIndex"></p></li>
+              <li class="page-item">
+                  <a class="page-link" onclick="showNext()" href="#">Next</a>
+              </li>
+          </ul>
+      </nav>
+  
+  </div>
+        <h1>Team</h1>
+        <table>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Positions</th> 
+              <th>Age</th>
+            </tr>
+            <tr>
+            <td><img src="images/players/ jaelon_darden.webp" alt="Jaelon Darden"></td>
+              <td>Jaelon Darden</td>
+              <td>Wide Reciver</td> 
+              <td>22</td>
+            </tr>
+            <tr>
+            <td><img src="images/players/ tristan_wirfs.webp" alt="Tristan Wirfs"></td>
+              <td>Tristan Wirfs</td>
+              <td>Tackle</td> 
+              <td>22</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/alex_cappa.webp" alt="Alex Cappa"></td>
+              <td>Alex Cappa</td>
+              <td>Guard</td> 
+              <td>26</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/anthony_nelson.webp" alt="Anthony Nelson"></td>
+              <td>Anthony Nelson</td>
+              <td>Offensive Linebacker</td> 
+              <td>24</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/antoine_winfield_jr.webp" alt="Antoine Winefield Jr."></td>
+              <td>Antoine Winefield Jr.</td>
+              <td>Safety</td> 
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/cam_gill.webp" alt="Cam Gill"></td>
+              <td>Cam Gill</td>
+              <td>Offensive Linebacker</td> 
+              <td>24</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/carlton_davis.webp" alt="Carlton Davis III"></td>
+              <td>Carlton Davis III</td>
+              <td>Cornerback</td> 
+              <td>25</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/chris_godwin.webp" alt="Chris Godwin"></td>
+              <td>Chris Godwin</td>
+              <td>Widereciver</td> 
+              <td>25</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/dee_delaney.webp" alt="Dee Delaney"></td>
+              <td>Dee Delaney</td>
+              <td>Cornerback</td> 
+              <td>26</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/devin_white.webp" alt="Devin White"></td>
+              <td>Devin White</td>
+              <td>Inside Linebacker</td> 
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/grant_stuard.webp" alt="Grant Stuard"></td>
+              <td>Grant Stuard</td>
+              <td>Inside Linebacker</td> 
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/jamel_dean.webp" alt="Jamel Dean"></td>
+              <td>Jamel Dean</td>
+              <td>Cornerback</td> 
+              <td>25</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/joe_tryon_shoyinka.webp" alt="Joe Tryon Shoyinka"></td>
+              <td>Joe Tryon Shoyinka</td>
+              <td>Offensive Linebacker</td> 
+              <td>22</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/jordan_whitehead.webp" alt="Jordan Whitehead"></td>
+              <td>Jordan Whitehead</td>
+              <td>Safety</td> 
+              <td>24</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/k_j_britt.webp" alt="K.J. Britt"></td>
+              <td>K.J, Britt</td>
+              <td>Inside Linebacker</td> 
+              <td>22</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/ke_shawn_vaughn.webp" alt="Ke'Shawn Vaughn"></td>
+              <td>Ke'Shawn Vaughn</td>
+              <td>Runningback</td> 
+              <td>24</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/kyle_trask.webp" alt="Kyle Trask"></td>
+              <td>Kyle Trask</td>
+              <td>Quaterback</td> 
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/leonard_fournette.webp" alt="Leonard Fournette"></td>
+              <td>Leonard Fournette</td>
+              <td>Runningback</td> 
+              <td>26</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/nick_leverett.webp" alt="Nick Leverett"></td>
+              <td>Nick Leverett</td>
+              <td>Guard</td> 
+              <td>25</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/robert_hainsey.webp" alt="Robert Hainsey"></td>
+              <td>Robert Hainsey</td>
+              <td>Offensive Lineman</td> 
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/ronald_jones.webp" alt="Ronald Jones II"></td>
+              <td>Ronald Jones II</td>
+              <td>Runningback</td> 
+              <td>24</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/scotty_miller.webp" alt="Scotty Miller"></td>
+              <td>Scotty Miller</td>
+              <td>Widereciver</td> 
+              <td>24</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/sean_murphy_bunting.webp" alt="Sean Murphy-Bunting"></td>
+              <td>Sean Murphy-Bunting</td>
+              <td>Cornerback</td> 
+              <td>24</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/tyler_johnson.webp" alt="Tyler Johnson"></td>
+              <td>Tyler Johnson</td>
+              <td>Widereciver</td> 
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><img src="images/players/vita_vea.webp" alt="Vita Vea"></td>
+              <td>Vita Vea</td>
+              <td>Defensive Line</td> 
+              <td>26</td>
+            </tr>
+          </table>
+
+    </main>
+    <footer>
+    </footer>
+    
+    <script src="./app.js"></script>
+    <script src="./data.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6Acjizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+          integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+          integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+          crossorigin="anonymous"></script>
+    <script>
+      function openNav() {
+        document.getElementById("hamburgerNav").style.width = "100%";
+      }
+      function closeNav() {
+        document.getElementById("hamburgerNav").style.width = "0%";
+      }
+    </script>
+  </body>
+</html>
+

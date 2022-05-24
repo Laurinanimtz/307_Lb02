@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="images/tampa-bay-buccaneers-2.png">
+
+    <title>Buccaneers</title>
+
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="images/tampa-bay-buccaneers-2.png" alt="Logo"></a>
+            <ul>
+              <li class="active">
+                <a href="./index.html">Home</a>
+              </li>
+              |
+              <li>
+                <a href="./team.html">Team</a>
+              </li>
+              |
+              <li>
+                <a href="./photos.html">Photos</a>
+              </li>
+            </ul>
+            <div id="hamburgerIcon" onclick="openNav()">&#9776;</div>
+            <nav id="hamburgerNav">
+            <a class="closebtn" onclick="closeNav()" href="#">&times;</a> 
+            <ul>
+              <li>
+                <a href="./index.html">Home</a>
+              </li>
+              <li>
+                <a href="./team.html">Team</a>
+              </li>
+              <li>
+                <a href="./photos.html">Photos</a>
+              </li>
+            </ul>
+            </nav>
+          </nav>
+    </header>
+    <main>
+      <section class="Home">
+        <img src="./images/home.webp" alt="Home">
+      </section>
+    </main>
+    <footer>
+      <a></a>
+    </footer>
+    <script>
+      function openNav() {
+        document.getElementById("hamburgerNav").style.width = "100%";
+      }
+      function closeNav() {
+        document.getElementById("hamburgerNav").style.width = "0%";
+      }
+    </script>
+  </body>
+</html>
