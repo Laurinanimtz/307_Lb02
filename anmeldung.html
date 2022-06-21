@@ -5,6 +5,7 @@
     <link rel="icon" type="image/x-icon" href="images/tampa-bay-buccaneers-2.png">
 
     <title>Buccaneers</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <link href="./style.css" rel="stylesheet" type="text/css" />
 </head>
@@ -53,12 +54,12 @@
 </header>
 <main>
         <h1>Sign In</h1>
-        <form>
-                <p>Anrede:
+        <form action="?" method="POST">
+                <p>salutation:
                 <select name="thema1" required>
-                    <option value="val1">Frau</option>
-                    <option value="val2" selected>Herr</option>
-                    <option value="val3">Anderes</option>w
+                    <option value="val1">Women</option>
+                    <option value="val2" selected>Men</option>
+                    <option value="val3">Divers</option>w
                 </select> </p>
             <p>Email:
                 <input name="email" type="email" required size="21" maxlength="50"></p>
@@ -73,15 +74,23 @@
                 <p id="length" class="invalid">Minimum <b>8 characters</b></p>
             </div> </p>
             <p>Buccaneers Fan:  <br>
-                <input type="radio" name="room" value="budget">Ja<br>
+                <input type="radio" name="room" value="budget">Yes<br>
                 <input type="radio" name="room" value="standard"
-                       checked>Nein<br>
+                       checked>No<br>
             </p>
-            <p>Nutzungsbediengungen akzeptieren:
+            <p>Accept terms of use:
             <p>
-                <input type="checkbox" name="extra" id="c1" value="breakf">
-                <label for="c1">Ja</label><br>
+                <input type="checkbox" name="extra" id="c1" value="breakf" required>
+                <label for="c1">Yes</label><br>
             </p></p>
+            <div class="form_container">
+                <form action="#" id="my_captcha_form">
+                    <div class="g-recaptcha"
+                         data-sitekey="6LfrFKQUAAAAAMzFobDZ7ZWy982lDxeps8cd1I2i"
+                    ></div>
+                    <p>
+                        <button type="submit" >Submit</button>
+                    </p>
         </form>
             <script>
                 var myInput = document.getElementById("psw");
@@ -90,19 +99,16 @@
                 var number = document.getElementById("number");
                 var length = document.getElementById("length");
 
-                // When the user clicks on the password field, show the message box
                 myInput.onfocus = function() {
                     document.getElementById("message").style.display = "block";
                 }
 
-                // When the user clicks outside of the password field, hide the message box
                 myInput.onblur = function() {
                     document.getElementById("message").style.display = "none";
                 }
 
-                // When the user starts to type something inside the password field
                 myInput.onkeyup = function() {
-                    // Validate lowercase letters
+
                     var lowerCaseLetters = /[a-z]/g;
                     if(myInput.value.match(lowerCaseLetters)) {
                         letter.classList.remove("invalid");
@@ -112,7 +118,6 @@
                         letter.classList.add("invalid");
                     }
 
-                    // Validate capital letters
                     var upperCaseLetters = /[A-Z]/g;
                     if(myInput.value.match(upperCaseLetters)) {
                         capital.classList.remove("invalid");
@@ -122,7 +127,6 @@
                         capital.classList.add("invalid");
                     }
 
-                    // Validate numbers
                     var numbers = /[0-9]/g;
                     if(myInput.value.match(numbers)) {
                         number.classList.remove("invalid");
@@ -132,7 +136,6 @@
                         number.classList.add("invalid");
                     }
 
-                    // Validate length
                     if(myInput.value.length >= 8) {
                         length.classList.remove("invalid");
                         length.classList.add("valid");
@@ -141,7 +144,21 @@
                         length.classList.add("invalid");
                     }
                 }
+                document.getElementById("my_captcha_form").addEventListener("submit",function(evt)
+                {
+
+                    var response = grecaptcha.getResponse();
+                    if(response.length == 0)
+                    {
+                        //reCaptcha not verified
+                        alert("please verify you are humann!");
+                        evt.preventDefault();
+                        return false;
+                    }
+
+                });
             </script>
+
 
 </main>
 <footer>

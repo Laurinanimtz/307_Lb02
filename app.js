@@ -168,5 +168,37 @@ myInput.onkeyup = function() {
         length.classList.add("invalid");
     }
 }
+
+public bool Validate()
+{
+    string Response = Request["g-recaptcha-response"];//Getting Response String Append to Post Method
+    bool Valid = false;
+    //Request to Google Server
+    HttpWebRequest req = (HttpWebRequest)WebRequest.Create
+(" https://www.google.com/recaptcha/api/siteverify?secret=YOUR SECRATE KEY &response=" + Response);
+    try
+    {
+        //Google recaptcha Response
+        using (WebResponse wResponse = req.GetResponse())
+        {
+
+            using (StreamReader readStream = new StreamReader(wResponse.GetResponseStream()))
+            {
+                string jsonResponse = readStream.ReadToEnd();
+
+                JavaScriptSerializer js = new JavaScriptSerializer();
+                MyObject data = js.Deserialize<MyObject>(jsonResponse);// Deserialize Json
+
+                Valid = Convert.ToBoolean(data.success);
+            }
+        }
+
+        return Valid;
+    }
+    catch (WebException ex)
+    {
+        throw ex;
+    }
+}
 </script>
 
