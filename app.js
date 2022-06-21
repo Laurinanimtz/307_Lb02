@@ -79,22 +79,20 @@ const { check, validationResult } = require('express-validator')
 const app = express()
 const port = 5000
 
-// Set Templating Enginge
 app.set('view engine', 'ejs')
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
-// Navigation
 app.get('', (req, res)=> {
     res.render('index')
 })
 
-app.get('/register', (req, res)=> {
-    res.render('register')
+app.get('/anmeldung', (req, res)=> {
+    res.render('anmeldung')
 })
 
-app.post('/register', urlencodedParser, [
-    check('username', 'This username must me 3+ characters long')
+app.post('/anmeldung', urlencodedParser, [
+    check('password', 'This password must me 3+ characters long')
         .exists()
         .isLength({ min: 3 }),
     check('email', 'Email is not valid')
@@ -103,7 +101,6 @@ app.post('/register', urlencodedParser, [
 ], (req, res)=> {
     const errors = validationResult(req)
     if(!errors.isEmpty()) {
-        // return res.status(422).jsonp(errors.array())
         const alert = errors.array()
         res.render('register', {
             alert
@@ -112,3 +109,63 @@ app.post('/register', urlencodedParser, [
 })
 
 app.listen(port, () => console.info(`App listening on port: ${port}`))
+
+<script>
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+    document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+    document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+    // Validate lowercase letters
+    var lowerCaseLetters = /[a-z]/g;
+    if(myInput.value.match(lowerCaseLetters)) {
+        letter.classList.remove("invalid");
+        letter.classList.add("valid");
+    } else {
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
+    }
+
+    // Validate capital letters
+    var upperCaseLetters = /[A-Z]/g;
+    if(myInput.value.match(upperCaseLetters)) {
+        capital.classList.remove("invalid");
+        capital.classList.add("valid");
+    } else {
+        capital.classList.remove("valid");
+        capital.classList.add("invalid");
+    }
+
+    // Validate numbers
+    var numbers = /[0-9]/g;
+    if(myInput.value.match(numbers)) {
+        number.classList.remove("invalid");
+        number.classList.add("valid");
+    } else {
+        number.classList.remove("valid");
+        number.classList.add("invalid");
+    }
+
+    // Validate length
+    if(myInput.value.length >= 8) {
+        length.classList.remove("invalid");
+        length.classList.add("valid");
+    } else {
+        length.classList.remove("valid");
+        length.classList.add("invalid");
+    }
+}
+</script>

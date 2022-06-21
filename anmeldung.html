@@ -64,7 +64,8 @@
                 <input name="email" type="email" required size="21" maxlength="50"></p>
             <br>
             <p>Passwort eingeben:
-                <input name="pw" type="password" required size="21" maxlength="10"></p>
+                <input name="pw" type="password" required size="21" maxlength="10" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            </p>
             <p>Buccaneers Fan:  <br>
                 <input type="radio" name="room" value="budget">Ja<br>
                 <input type="radio" name="room" value="standard"
@@ -75,7 +76,15 @@
                 <input type="checkbox" name="extra" id="c1" value="breakf">
                 <label for="c1">Ja</label><br>
             </p></p>
-            <button type="submit">Anmelden</button>
+            <button type="submit">Submit</button>
+
+            <div id="message">
+                <h3>Password must contain the following:</h3>
+                <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                <p id="number" class="invalid">A <b>number</b></p>
+                <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            </div>
         </form>
 
 </main>
