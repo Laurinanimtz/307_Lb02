@@ -91,7 +91,7 @@
                          data-sitekey="6LfrFKQUAAAAAMzFobDZ7ZWy982lDxeps8cd1I2i"
                     ></div>
                     <p>
-                        <button type="submit" >Submit</button>
+                        <button type="submit" formaction="./login.html">Submit</button>
                     </p>
         </form>
         </div>
@@ -161,6 +161,16 @@
                     }
 
                 });
+                function validate(event) {
+                    var formIsValid = true;
+
+                    if (formIsValid) {
+                        // let the browser submit the form.
+                    } else {
+                        // prevent the form submitting.
+                        event.preventDefault();
+                    }
+                }
             </script>
 
 
