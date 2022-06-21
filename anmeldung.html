@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="images/tampa-bay-buccaneers-2.png">
+
+    <title>Buccaneers</title>
+
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<header>
+    <nav>
+        <a href="index.html"><img src="images/tampa-bay-buccaneers-2.png" alt="Logo"></a>
+        <ul>
+            <li class="active">
+                <a href="./index.html">Home</a>
+            </li>
+            |
+            <li>
+                <a href="./team.html">Team</a>
+            </li>
+            |
+            <li>
+                <a href="./photos.html">Photos</a>
+            </li>
+            |
+            <li>
+                <a href="./anmeldung.html">Sign In</a>
+            </li>
+        </ul>
+        <div id="hamburgerIcon" onclick="openNav()">&#9776;</div>
+        <nav id="hamburgerNav">
+            <a class="closebtn" onclick="closeNav()" href="#">&times;</a>
+            <ul>
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./team.html">Team</a>
+                </li>
+                <li>
+                    <a href="./photos.html">Photos</a>
+                </li>
+                |
+                <li>
+                    <a href="./anmeldung.html">Sign In</a>
+                </li>
+            </ul>
+        </nav>
+    </nav>
+</header>
+<main>
+        <h1>Sign In</h1>
+        <form>
+                <p>Anrede:
+                <select name="thema1" required>
+                    <option value="val1">Frau</option>
+                    <option value="val2" selected>Herr</option>
+                    <option value="val3">Anderes</option>w
+                </select> </p>
+            <p>Email:
+                <input name="email" type="email" required size="21" maxlength="50"></p>
+            <br>
+            <p>Passwort eingeben:
+                <input name="pw" type="password" required size="21" maxlength="10"></p>
+            <p>Buccaneers Fan:  <br>
+                <input type="radio" name="room" value="budget">Ja<br>
+                <input type="radio" name="room" value="standard"
+                       checked>Nein<br>
+            </p>
+            <p>Nutzungsbediengungen akzeptieren:
+            <p>
+                <input type="checkbox" name="extra" id="c1" value="breakf">
+                <label for="c1">Ja</label><br>
+            </p></p>
+            <button type="submit">Anmelden</button>
+        </form>
+
+</main>
+<footer>
+    <a></a>
+</footer>
+<script>
+    function openNav() {
+        document.getElementById("hamburgerNav").style.width = "100%";
+    }
+    function closeNav() {
+        document.getElementById("hamburgerNav").style.width = "0%";
+    }
+</script>
+</body>
+</html>

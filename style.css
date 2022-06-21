@@ -239,3 +239,18 @@ main {
   95%  {top: -500%}
   100% {top: 0}
 }
+
+p {
+    text-align: left;
+    margin: 10px;
+    margin-left: 700px;
+}
+input {
+    text-align: left;
+    text-decoration: none;
+}
+select{
+    text-align: left;
+    margin-right: 350px;
+    text-decoration: none;
+}
