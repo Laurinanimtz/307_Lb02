@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="images/tampa-bay-buccaneers-2.png">
+    <link rel="icon" type="image/x-icon" href="./images/tampa-bay-buccaneers-2.png">
 
     <title>Buccaneers</title>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -13,14 +13,10 @@
 <body>
 <header>
     <nav>
-        <a href="index.html"><img src="images/tampa-bay-buccaneers-2.png" alt="Logo"></a>
+        <a href="./index.html"><img src="./images/tampa-bay-buccaneers-2.png" alt="Logo"></a>
         <ul>
-            <li class="active">
-                <a href="./index.html">Home</a>
-            </li>
-            |
             <li>
-                <a href="./team.html">Team</a>
+                <a href="./index.html">Home</a>
             </li>
             |
             <li>
@@ -28,6 +24,10 @@
             </li>
             |
             <li>
+                <a href="./team.html">Team</a>
+            </li>
+            |
+            <li class="active">
                 <a href="./anmeldung.html">Sign In</a>
             </li>
         </ul>
@@ -38,11 +38,13 @@
                 <li>
                     <a href="./index.html">Home</a>
                 </li>
-                <li>
-                    <a href="./team.html">Team</a>
-                </li>
+                |
                 <li>
                     <a href="./photos.html">Photos</a>
+                </li>
+                |
+                <li>
+                    <a href="./team.html">Team</a>
                 </li>
                 |
                 <li>
@@ -91,6 +93,8 @@
                     <p>
                         <button type="submit" >Submit</button>
                     </p>
+        </form>
+        </div>
         </form>
             <script>
                 var myInput = document.getElementById("psw");
